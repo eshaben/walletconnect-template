@@ -68,7 +68,7 @@ function App() {
           return;
         }
 
-        const {chainId, accounts} = payload.params[0];
+        const { chainId, accounts } = payload.params[0];
         await onConnect(chainId, accounts[0]);
         setFetching(false)
       })
@@ -84,7 +84,7 @@ function App() {
       // check state variables here & if needed refresh the app
     }
 
-    const onConnect = async (chainId, address) => {
+    const onConnect = async (chainId, connectedAccount) => {
       // handle connect event
     }
 
@@ -97,7 +97,7 @@ function App() {
 
   const connect = async () => {
     setFetching(true);
-    
+
     // add connection logic
   }
 
@@ -115,15 +115,15 @@ function App() {
 
   return (
     <Wrapper>
-        <img src={logo} alt="logo" />
-        <Content>
-          <Header>
-            Moonbeam WalletConnect Demo App
-          </Header>
-          
-          {/* buttons and network details will go here */}
+      <img src={logo} alt="logo" />
+      <Content>
+        <Header>
+          Moonbeam WalletConnect Demo App
+        </Header>
 
-        </Content>
+        {/* buttons and network details will go here */}
+
+      </Content>
     </Wrapper>
   );
 }
